@@ -1,0 +1,6 @@
+{
+  "name": "Astrateq Diagnostic Compatibility Report",
+  "description": "A premium, interactive, and factually accurate diagnostic compatibility report for Astrateq's Edge Sentinel platform focused on post-reservation Canadian vehicle owners.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
