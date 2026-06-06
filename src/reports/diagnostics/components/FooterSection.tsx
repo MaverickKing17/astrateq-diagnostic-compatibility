@@ -9,7 +9,7 @@ export default function FooterSection({ onPrint, onShare }: FooterSectionProps) 
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-12 mt-12 border-t border-slate-800/80 text-slate-400 font-sans" id="footer-section">
+    <footer className="py-12 mt-12 border-t border-white/10 text-slate-400 font-sans" id="footer-section">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
         
         {/* Brand & Tagline */}
@@ -20,7 +20,7 @@ export default function FooterSection({ onPrint, onShare }: FooterSectionProps) 
             </svg>
             <span className="font-display font-bold text-lg text-slate-100 tracking-tight">Astrateq<span className="text-cyan-400">Gadgets</span></span>
           </div>
-          <p className="text-xs font-mono uppercase tracking-widest text-[#00D4FF]">Drive Safer. Drive Smarter.</p>
+          <p className="text-xs font-mono uppercase tracking-[0.2em] text-[#00D4FF]">Drive Safer. Drive Smarter.</p>
         </div>
 
         {/* Action Quick Links */}
@@ -42,10 +42,10 @@ export default function FooterSection({ onPrint, onShare }: FooterSectionProps) 
 
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-slate-900 text-xs text-slate-500 leading-relaxed">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-white/5 text-xs text-slate-500 leading-relaxed">
         
         {/* Canadian Support Center */}
-        <div className="space-y-1.5 border-r border-[#131D2E] pr-4">
+        <div className="space-y-1.5 md:border-r border-white/10 pr-4">
           <div className="font-mono text-[10px] text-slate-400 uppercase tracking-wider flex items-center gap-1">
             <Globe className="w-3.5 h-3.5 text-cyan-400" />
             Canadian Support & Logistics
@@ -59,7 +59,7 @@ export default function FooterSection({ onPrint, onShare }: FooterSectionProps) 
         </div>
 
         {/* Legal Regulatory Disclaimers */}
-        <div className="space-y-1.5 border-r border-[#131D2E] pr-4">
+        <div className="space-y-1.5 md:border-r border-white/10 pr-4">
           <div className="font-mono text-[10px] text-slate-400 uppercase tracking-wider flex items-center gap-1">
             <ShieldAlert className="w-3.5 h-3.5 text-cyan-400" />
             Passive Sniffing Regulatory Disclaimer

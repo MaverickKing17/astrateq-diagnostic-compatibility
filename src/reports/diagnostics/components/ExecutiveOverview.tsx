@@ -65,10 +65,10 @@ export default function ExecutiveOverview({ selectedVehicle }: ExecutiveOverview
   ];
 
   return (
-    <div className="py-10 border-b border-slate-800/60" id="executive-overview">
+    <div className="py-10 border-b border-white/10" id="executive-overview">
       <div className="mb-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-[#00D4FF]">Part I — Executive Readiness Audit</span>
-        <h2 className="font-display font-semibold text-2xl text-[#F8F9FA] mt-1">Core Telemetry Audit (KPI Overview)</h2>
+        <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#00D4FF]">Part I — Executive Readiness Audit</span>
+        <h2 className="font-display font-semibold text-2xl text-white mt-1">Core Telemetry Audit (KPI Overview)</h2>
         <p className="font-sans text-slate-400 text-sm mt-1">
           High-fidelity indicators monitoring passive read compatibility across four critical telemetry dimensions.
         </p>
@@ -80,20 +80,20 @@ export default function ExecutiveOverview({ selectedVehicle }: ExecutiveOverview
           return (
             <div
               key={idx}
-              className="bg-[#131D2E] border border-slate-800 rounded-xl p-5 hover:border-slate-700 transition flex flex-col justify-between h-52 group relative"
+              className="bg-white/5 border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.2)] hover:border-cyan-500/50 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)] backdrop-blur-md rounded-2xl p-5 transition-all duration-300 flex flex-col justify-between h-52 group relative"
             >
               <div>
                 <div className="flex justify-between items-start mb-3">
-                  <div className="p-2 bg-[#0B1120] rounded-lg border border-slate-800">
+                  <div className="p-2 bg-black/40 rounded-lg border border-white/10 group-hover:border-cyan-500/30 transition-colors">
                     {card.icon}
                   </div>
                   <div className="text-right">
                     <div className="text-[10px] uppercase font-mono tracking-wider text-slate-500">{card.tag}</div>
-                    <div className="text-2xl font-bold text-slate-100 font-mono mt-0.5">{card.score}%</div>
+                    <div className="text-2xl font-bold text-white font-mono mt-0.5">{card.score}%</div>
                   </div>
                 </div>
 
-                <h3 className="font-sans font-medium text-sm text-[#F8F9FA] group-hover:text-cyan-400 transition-colors">
+                <h3 className="font-sans font-medium text-sm text-slate-100 group-hover:text-cyan-400 transition-colors">
                   {card.title}
                 </h3>
                 

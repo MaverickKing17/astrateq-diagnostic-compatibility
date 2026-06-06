@@ -24,22 +24,22 @@ export default function CompatibilityScorecard({ selectedVehicle }: Compatibilit
   ];
 
   return (
-    <div className="py-10 border-b border-slate-800/60" id="compatibility-scorecard">
+    <div className="py-10 border-b border-white/10" id="compatibility-scorecard">
       <div className="mb-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-[#00D4FF]">Part IV — Compatibility Appraisal</span>
-        <h2 className="font-display font-semibold text-2xl text-[#F8F9FA] mt-1">Founding Member Compatibility Scorecard</h2>
+        <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#00D4FF]">Part IV — Compatibility Appraisal</span>
+        <h2 className="font-display font-semibold text-2xl text-white mt-1">Founding Member Compatibility Scorecard</h2>
         <p className="font-sans text-slate-400 text-sm mt-1">
           A definitive mathematical baseline scoring your specific vehicle configuration for local Edge Sentinel telemetry loops.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 bg-[#131D2E] border border-slate-800 rounded-xl p-6 shadow-xl relative overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 shadow-2xl shadow-black/40 relative overflow-hidden">
         
         {/* Subtle background glow */}
         <div className="absolute -top-12 -left-12 w-48 h-48 bg-cyan-500/5 rounded-full blur-2xl pointer-events-none" />
 
         {/* Circular Dial Column */}
-        <div className="flex flex-col items-center justify-center p-4 border-b lg:border-b-0 lg:border-r border-slate-800/80">
+        <div className="flex flex-col items-center justify-center p-4 border-b lg:border-b-0 lg:border-r border-white/10">
           <div className="relative flex items-center justify-center">
             {/* SVG circle track */}
             <svg width="140" height="140" viewBox="0 0 120 120" className="transform -rotate-90">
@@ -47,7 +47,7 @@ export default function CompatibilityScorecard({ selectedVehicle }: Compatibilit
                 cx="60"
                 cy="60"
                 r={radius}
-                className="stroke-[#0B1120]"
+                className="stroke-black/60"
                 strokeWidth="8"
                 fill="transparent"
               />
@@ -83,15 +83,15 @@ export default function CompatibilityScorecard({ selectedVehicle }: Compatibilit
         {/* Breakdown Subsystems Column */}
         <div className="col-span-1 lg:col-span-2 flex flex-col justify-between space-y-4">
           <div>
-            <h3 className="text-xs uppercase font-mono tracking-widest text-slate-400 mb-3">Diagnostic Telemetry Breakdown</h3>
+            <h3 className="text-xs uppercase font-mono tracking-widest text-[#00D4FF] mb-3">Diagnostic Telemetry Breakdown</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {breakdowns.map((item, idx) => (
-                <div key={idx} className="bg-[#0B1120]/40 border border-slate-800 p-3 rounded-lg">
+                <div key={idx} className="bg-black/40 border border-white/5 p-3.5 rounded-xl hover:border-white/10 transition-colors">
                   <div className="flex justify-between items-center text-xs font-mono mb-1.5">
                     <span className="text-slate-300">{item.name}</span>
                     <span className="font-bold text-slate-100">{item.score}%</span>
                   </div>
-                  <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                  <div className="h-1.5 bg-white/5 rounded-full overflow-hidden border border-white/5">
                     <div
                       className={`h-full ${item.color} rounded-full transition-all duration-500`}
                       style={{ width: `${item.score}%` }}
@@ -103,7 +103,7 @@ export default function CompatibilityScorecard({ selectedVehicle }: Compatibilit
           </div>
 
           {/* Verdict and Recommendations Box */}
-          <div className="bg-[#0B1120] border border-slate-800/80 rounded-lg p-4 flex gap-3 text-xs leading-relaxed text-slate-300">
+          <div className="bg-black/40 border border-white/10 rounded-2xl p-4 flex gap-3 text-xs leading-relaxed text-slate-300">
             {isFullyReady ? (
               <>
                 <CheckCircle className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />

@@ -25,10 +25,10 @@ export default function ProductEngineeringShowcase() {
   ];
 
   return (
-    <div className="py-10 border-b border-slate-800/60" id="product-showcase">
+    <div className="py-10 border-b border-white/10" id="product-showcase">
       <div className="mb-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-[#00D4FF]">Part V — Product Engineering & Benefits</span>
-        <h2 className="font-display font-semibold text-2xl text-[#F8F9FA] mt-1">Founding Member Benefits & Engineering Specs</h2>
+        <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#00D4FF]">Part V — Product Engineering & Benefits</span>
+        <h2 className="font-display font-semibold text-2xl text-white mt-1">Founding Member Benefits & Engineering Specs</h2>
         <p className="font-sans text-slate-400 text-sm mt-1">
           Honest, factual advantages for our early-stage pre-reservation subscribers in the Canadian territory.
         </p>
@@ -37,41 +37,41 @@ export default function ProductEngineeringShowcase() {
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
         
         {/* Hardware Details Schematic (SVG representation of the enclosure and optical system) */}
-        <div className="lg:col-span-2 bg-[#131D2E] border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col justify-between">
+        <div className="lg:col-span-2 bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-5 shadow-lg flex flex-col justify-between">
           <div>
             <div className="text-xs uppercase tracking-wider text-slate-400 font-mono mb-4">Edge Sentinel Structural Build</div>
             
             {/* SVG Schematic of the hardware casing details */}
             <svg viewBox="0 0 200 160" className="w-full h-auto text-slate-400">
               {/* Outer enclosure */}
-              <rect x="10" y="10" width="180" height="140" rx="10" fill="none" stroke="#334155" strokeWidth="2" />
-              <rect x="14" y="14" width="172" height="132" rx="8" fill="none" stroke="#1E293B" strokeWidth="1" />
+              <rect x="10" y="10" width="180" height="140" rx="10" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="2" />
+              <rect x="14" y="14" width="172" height="132" rx="8" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="1" />
               
               {/* Thermal fins */}
-              <line x1="40" y1="10" x2="40" y2="25" stroke="#475569" strokeWidth="2" />
-              <line x1="60" y1="10" x2="60" y2="25" stroke="#475569" strokeWidth="2" />
-              <line x1="80" y1="10" x2="80" y2="25" stroke="#475569" strokeWidth="2" />
-              <line x1="100" y1="10" x2="100" y2="25" stroke="#475569" strokeWidth="2" />
-              <line x1="120" y1="10" x2="120" y2="25" stroke="#475569" strokeWidth="2" />
-              <line x1="140" y1="10" x2="140" y2="25" stroke="#475569" strokeWidth="2" />
-              <line x1="160" y1="10" x2="160" y2="25" stroke="#475569" strokeWidth="2" />
+              <line x1="40" y1="10" x2="40" y2="25" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+              <line x1="60" y1="10" x2="60" y2="25" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+              <line x1="80" y1="10" x2="80" y2="25" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+              <line x1="100" y1="10" x2="100" y2="25" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+              <line x1="120" y1="10" x2="120" y2="25" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+              <line x1="140" y1="10" x2="140" y2="25" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+              <line x1="160" y1="10" x2="160" y2="25" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
 
               {/* Internal Circuit Outline */}
-              <rect x="25" y="45" width="150" height="85" rx="4" fill="#0B1120" stroke="#00D4FF" strokeWidth="1" strokeDasharray="3 3" />
+              <rect x="25" y="45" width="150" height="85" rx="4" fill="rgba(0, 0, 0, 0.4)" stroke="#00D4FF" strokeWidth="1" strokeDasharray="3 3" />
               
               {/* ARM Co-Processor */}
-              <rect x="35" y="65" width="45" height="40" rx="3" fill="#1E293B" stroke="#00D4FF" strokeWidth="1.5" />
+              <rect x="35" y="65" width="45" height="40" rx="3" fill="rgba(255, 255, 255, 0.05)" stroke="#00D4FF" strokeWidth="1.5" />
               <text x="57" y="88" fill="#00D4FF" className="font-mono text-[8px] font-bold" textAnchor="middle">ARM32</text>
-              <text x="57" y="98" fill="#475569" className="font-mono text-[6px]" textAnchor="middle">Enclave</text>
+              <text x="57" y="98" fill="#64748B" className="font-mono text-[6px]" textAnchor="middle">Enclave</text>
 
               {/* Optical Sensors Lens schematic */}
-              <circle cx="135" cy="85" r="16" fill="#1E293B" stroke="#FFB020" strokeWidth="1" />
-              <circle cx="135" cy="85" r="8" fill="#0B1120" stroke="#00D4FF" strokeWidth="1" />
+              <circle cx="135" cy="85" r="16" fill="rgba(255, 255, 255, 0.05)" stroke="#FFB020" strokeWidth="1" />
+              <circle cx="135" cy="85" r="8" fill="rgba(0,0,0,0.4)" stroke="#00D4FF" strokeWidth="1" />
               <circle cx="135" cy="85" r="3" fill="#00D4FF" />
               <text x="135" y="115" fill="#64748B" className="font-mono text-[7px]" textAnchor="middle">1080P OPTICAL</text>
               
               {/* Wiring harness connection point */}
-              <rect x="180" y="65" width="10" height="30" rx="2" fill="#334155" />
+              <rect x="180" y="65" width="10" height="30" rx="2" fill="rgba(255, 255, 255, 0.1)" />
               <line x1="170" y1="73" x2="185" y2="73" stroke="#94A3B8" strokeWidth="1" />
               <line x1="170" y1="80" x2="185" y2="80" stroke="#94A3B8" strokeWidth="1" />
               <line x1="170" y1="87" x2="185" y2="87" stroke="#94A3B8" strokeWidth="1" />
@@ -80,7 +80,7 @@ export default function ProductEngineeringShowcase() {
             </svg>
           </div>
 
-          <div className="mt-4 pt-3 border-t border-slate-800 bg-[#0B1120]/40 p-3 rounded-lg text-[11px] text-slate-400 font-sans leading-relaxed">
+          <div className="mt-4 pt-3 border-t border-white/5 bg-black/40 p-3 rounded-xl text-[11px] text-slate-400 font-sans leading-relaxed">
             <span className="font-medium text-slate-300 block mb-1">Authentic CNC Craftsmanship</span>
             Made of rigid structural aluminum profiles capable of managing battery cell heat loads during continuous diagnostic operations. Fully certified under Transport Canada passive monitoring rules.
           </div>
@@ -89,9 +89,9 @@ export default function ProductEngineeringShowcase() {
         {/* early adopter benefits column */}
         <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-4">
           {benefits.map((benefit, idx) => (
-            <div key={idx} className="bg-[#131D2E] border border-slate-800 rounded-xl p-5 hover:border-slate-700 hover:bg-slate-900/10 transition">
+            <div key={idx} className="bg-white/5 border border-white/10 hover:border-cyan-500/50 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)] backdrop-blur-md transition-all duration-300 rounded-2xl p-5">
               <div className="flex gap-3 items-center mb-3">
-                <div className="p-2 bg-[#0B1120] border border-slate-800 rounded-lg">
+                <div className="p-2 bg-black/40 border border-white/10 rounded-lg">
                   {benefit.icon}
                 </div>
                 <h3 className="font-sans font-medium text-[#F8F9FA] text-sm">

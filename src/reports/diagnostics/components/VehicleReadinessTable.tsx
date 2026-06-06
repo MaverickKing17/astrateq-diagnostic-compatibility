@@ -75,42 +75,42 @@ export default function VehicleReadinessTable({ selectedVehicle }: VehicleReadin
   };
 
   return (
-    <div className="py-10 border-b border-slate-800/60" id="readiness-table">
+    <div className="py-10 border-b border-white/10" id="readiness-table">
       <div className="mb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
         <div>
-          <span className="text-xs font-mono uppercase tracking-widest text-[#00D4FF]">Part II — Vehicle Subsystems</span>
-          <h2 className="font-display font-semibold text-2xl text-[#F8F9FA] mt-1">Vehicle Intelligence Readiness Checklist</h2>
+          <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#00D4FF]">Part II — Vehicle Subsystems</span>
+          <h2 className="font-display font-semibold text-2xl text-white mt-1">Vehicle Intelligence Readiness Checklist</h2>
           <p className="font-sans text-slate-400 text-sm mt-1">
             Standardized readiness states for Canadian environmental and CMVSS driving safety classifications.
           </p>
         </div>
-        <div className="text-xs font-mono text-slate-400 bg-slate-900 border border-slate-800 rounded px-3 py-1.5 w-max print:hidden">
+        <div className="text-xs font-mono text-slate-400 bg-white/5 border border-white/10 rounded-xl px-3 py-1.5 w-max print:hidden">
           💡 Hover row for structural tech breakdown
         </div>
       </div>
 
       {/* Responsive Table layout */}
-      <div className="bg-[#131D2E] border border-slate-800 rounded-xl overflow-hidden shadow-lg">
+      <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-2xl shadow-black/40">
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="border-b border-slate-800 bg-[#0B1120]/40 font-mono text-[11px] uppercase tracking-wider text-slate-400">
+              <tr className="border-b border-white/10 bg-black/40 font-mono text-[10px] uppercase tracking-wider text-slate-400">
                 <th className="py-4 px-5">Vehicle Subsystem Check</th>
                 <th className="py-4 px-5">Functional Scope Details</th>
                 <th className="py-4 px-5">Diagnostics Status</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-800/60 text-slate-200">
+            <tbody className="divide-y divide-white/5 text-slate-200">
               {subsystems.map((sub) => (
                 <tr
                   key={sub.id}
-                  className="hover:bg-[#0B1120]/30 transition relative group cursor-pointer"
+                  className="hover:bg-white/5 transition relative group cursor-pointer"
                   onMouseEnter={() => setHoveredRow(sub.id)}
                   onMouseLeave={() => setHoveredRow(null)}
                 >
                   <td className="py-4 px-5 align-top">
-                    <div className="flex items-center gap-2.5 font-sans font-medium text-sm text-[#F8F9FA] group-hover:text-cyan-400 transition-colors">
-                      <div className="p-1 px-1.5 bg-[#0B1120] border border-slate-800 rounded">
+                    <div className="flex items-center gap-2.5 font-sans font-medium text-sm text-slate-100 group-hover:text-cyan-400 transition-colors">
+                      <div className="p-1 px-1.5 bg-black/40 border border-white/10 rounded-lg group-hover:border-cyan-500/30 transition-colors">
                         {sub.icon}
                       </div>
                       <span>{sub.name}</span>
@@ -122,7 +122,7 @@ export default function VehicleReadinessTable({ selectedVehicle }: VehicleReadin
                     
                     {/* Hover Effect explanation box */}
                     {hoveredRow === sub.id && (
-                      <div className="absolute left-5 top-full -translate-y-2 z-20 w-80 bg-slate-950 border border-slate-800 rounded-lg p-3 shadow-2xl animate-fade-in print:hidden">
+                      <div className="absolute left-5 top-full -translate-y-2 z-20 w-80 bg-black/95 border border-white/10 backdrop-blur-md rounded-xl p-3 shadow-2xl animate-fade-in print:hidden">
                         <div className="text-[10px] text-cyan-400 font-mono uppercase tracking-wider mb-1 flex items-center gap-1">
                           <HelpCircle className="w-3 h-3" /> Technical Engine Insight
                         </div>
@@ -144,7 +144,7 @@ export default function VehicleReadinessTable({ selectedVehicle }: VehicleReadin
       </div>
 
       {selectedVehicle.adapterNeeded && (
-        <div className="mt-4 bg-amber-950/20 border border-amber-800/40 rounded-xl p-4 flex gap-3 text-xs text-amber-300 leading-relaxed">
+        <div className="mt-4 bg-amber-500/10 border border-amber-500/20 rounded-2xl p-4 flex gap-3 text-xs text-amber-300 leading-relaxed">
           <AlertCircle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
           <div>
             <span className="font-semibold block mb-1">Harness Adapter Required for {selectedVehicle.make} {selectedVehicle.model}</span>

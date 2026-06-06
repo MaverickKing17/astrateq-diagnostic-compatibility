@@ -20,7 +20,7 @@ export default function HeroSection({
   onShare
 }: HeroSectionProps) {
   return (
-    <div className="relative pt-8 pb-12 overflow-hidden border-b border-slate-800/60 print:pt-4 print:pb-4 print:border-none" id="hero-section">
+    <div className="relative pt-8 pb-12 overflow-hidden border-b border-white/5 print:pt-4 print:pb-4 print:border-none" id="hero-section">
       {/* Background gradients */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-[120px] pointer-events-none print:hidden" />
       <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[100px] pointer-events-none print:hidden" />
@@ -53,7 +53,7 @@ export default function HeroSection({
           </p>
 
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-6 print:hidden">
-            <div className="flex items-center gap-3 bg-[#131D2E] border border-slate-800 px-4 py-2 rounded-lg">
+            <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-md px-4 py-2 rounded-xl focus-within:border-cyan-500/50 transition-all duration-300">
               <MapPin className="w-4 h-4 text-cyan-400 shrink-0" />
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase tracking-wider text-slate-400 font-mono">Territory Audit</span>
@@ -63,7 +63,7 @@ export default function HeroSection({
                   className="bg-transparent text-sm text-[#F8F9FA] font-medium border-none outline-none cursor-pointer pr-1"
                 >
                   {provinces.map((prov) => (
-                    <option key={prov.code} value={prov.code} className="bg-[#131D2E] text-slate-100">
+                    <option key={prov.code} value={prov.code} className="bg-[#050510] text-[#F8F9FA]">
                       {prov.name} (CMVSS-Ready)
                     </option>
                   ))}
@@ -74,7 +74,7 @@ export default function HeroSection({
             <div className="flex items-center gap-2">
               <button
                 onClick={onPrint}
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium text-[#F8F9FA] bg-slate-800 hover:bg-slate-700 transition border border-slate-700 rounded-lg cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold tracking-wide text-white bg-gradient-to-r from-cyan-500 to-indigo-600 hover:opacity-90 active:scale-95 transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)] rounded-xl cursor-pointer"
                 id="btn-print-report"
               >
                 <Printer className="w-4 h-4 text-cyan-400" />
@@ -82,7 +82,7 @@ export default function HeroSection({
               </button>
               <button
                 onClick={onShare}
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900 border border-slate-800 rounded-lg transition"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium text-slate-300 hover:text-white bg-white/5 border border-white/10 hover:bg-white/10 rounded-xl transition active:scale-95 cursor-pointer"
                 id="btn-share-report"
               >
                 <Share2 className="w-4 h-4 text-slate-400" />
@@ -99,7 +99,7 @@ export default function HeroSection({
 
         {/* Dashboard/OBD Hardware Graphic */}
         <div className="flex-1 w-full max-w-md lg:max-w-lg mt-4 lg:mt-0 relative print:hidden">
-          <div className="relative bg-[#131D2E] border border-slate-800 rounded-2xl p-6 shadow-2xl overflow-hidden group">
+          <div className="relative bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-6 shadow-2xl shadow-black/40 overflow-hidden group">
             {/* Ambient indicator lights inside the hardware module */}
             <div className="absolute top-4 right-4 flex items-center gap-1.5 font-mono text-[9px] text-[#00D4FF]">
               <span className="w-1.5 h-1.5 bg-[#00D4FF] rounded-full animate-ping" />
@@ -170,7 +170,7 @@ export default function HeroSection({
               <line x1="390" y1="230" x2="390" y2="210" stroke="#334155" strokeWidth="1" />
             </svg>
 
-            <div className="mt-4 flex justify-between items-center bg-[#0B1120]/60 p-3 rounded-lg border border-slate-800">
+            <div className="mt-4 flex justify-between items-center bg-black/40 p-3 rounded-xl border border-white/10">
               <div>
                 <div className="text-[10px] text-slate-400 font-mono uppercase">Interfaced Setup</div>
                 <div className="text-xs font-bold text-slate-200">Edge Sentinel Bundled Hardware</div>

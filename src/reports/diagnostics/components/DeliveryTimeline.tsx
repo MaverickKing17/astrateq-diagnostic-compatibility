@@ -45,10 +45,10 @@ export default function DeliveryTimeline({ selectedProvinceName }: DeliveryTimel
   ];
 
   return (
-    <div className="py-10 border-b border-slate-800/60" id="delivery-timeline">
+    <div className="py-10 border-b border-white/10" id="delivery-timeline">
       <div className="mb-8">
-        <span className="text-xs font-mono uppercase tracking-widest text-[#00D4FF]">Part VI — Delivery Roadmap</span>
-        <h2 className="font-display font-semibold text-2xl text-[#F8F9FA] mt-1">Astrateq Architecture Delivery Timeline</h2>
+        <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#00D4FF]">Part VI — Delivery Roadmap</span>
+        <h2 className="font-display font-semibold text-2xl text-white mt-1">Astrateq Architecture Delivery Timeline</h2>
         <p className="font-sans text-slate-400 text-sm mt-1">
           Tracking the exact engineering stages of your Edge Sentinel hardware packet from factory allocation to your doorstep.
         </p>
@@ -56,29 +56,29 @@ export default function DeliveryTimeline({ selectedProvinceName }: DeliveryTimel
 
       <div className="relative">
         {/* Continuous Line */}
-        <div className="absolute left-[21px] top-4 bottom-4 w-0.5 bg-slate-800 print:hidden" />
+        <div className="absolute left-[21px] top-4 bottom-4 w-0.5 bg-white/10 print:hidden" />
 
         <div className="space-y-8 relative">
           {timelineSteps.map((step) => (
             <div key={step.id} className="flex gap-6 items-start group">
               
               {/* Node bullet */}
-              <div className="relative z-10 flex items-center justify-center w-11 h-11 rounded-full bg-[#131D2E] border border-slate-800 group-hover:border-slate-700 transition">
+              <div className="relative z-10 flex items-center justify-center w-11 h-11 rounded-full bg-black/60 border border-white/10 group-hover:border-cyan-500/30 transition duration-300">
                 {step.icon}
               </div>
 
               {/* Step info card */}
-              <div className="flex-1 bg-[#131D2E] border border-slate-800/80 rounded-xl p-5 hover:border-slate-700/80 transition shadow-md">
+              <div className="flex-1 bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-5 hover:border-cyan-500/50 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-all duration-300 shadow-md">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                  <h3 className="font-sans font-semibold text-base text-[#F8F9FA] group-hover:text-cyan-400 transition-colors">
+                  <h3 className="font-sans font-semibold text-base text-slate-100 group-hover:text-cyan-400 transition-colors">
                     {step.title}
                   </h3>
-                  <span className={`text-[10px] font-mono uppercase px-2 py-0.5 rounded border tracking-wider w-max ${
+                  <span className={`text-[10px] font-mono uppercase px-2- py-0.5 rounded border tracking-wider w-max px-2 ${
                     step.status === 'completed'
-                      ? 'bg-emerald-950/40 text-emerald-400 border-emerald-800/50'
+                      ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
                       : step.status === 'active'
-                      ? 'bg-cyan-950/40 text-cyan-400 border-cyan-800/50'
-                      : 'bg-[#0B1120] text-slate-500 border-slate-800'
+                      ? 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20 shadow-[0_0_10px_rgba(34,211,238,0.2)]'
+                      : 'bg-black/40 text-slate-500 border-white/5'
                   }`}>
                     {step.date}
                   </span>

@@ -36,10 +36,10 @@ export default function PrivacySecurityAssessment() {
   ];
 
   return (
-    <div className="py-10 border-b border-slate-800/60" id="privacy-security-assessment">
+    <div className="py-10 border-b border-white/10" id="privacy-security-assessment">
       <div className="mb-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-[#00D4FF]">Part III — Security Shield</span>
-        <h2 className="font-display font-semibold text-2xl text-[#F8F9FA] mt-1">Privacy & Security Assessment</h2>
+        <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#00D4FF]">Part III — Security Shield</span>
+        <h2 className="font-display font-semibold text-2xl text-white mt-1">Privacy & Security Assessment</h2>
         <p className="font-sans text-slate-400 text-sm mt-1">
           Detailed cryptographic and privacy audits protecting your vehicle log files. Guaranteed PIPEDA compliance.
         </p>
@@ -52,15 +52,15 @@ export default function PrivacySecurityAssessment() {
             <div
               key={test.id}
               onClick={() => setExpandedId(isExpanded ? null : test.id)}
-              className="bg-[#131D2E] border border-slate-800 rounded-xl p-5 hover:border-slate-700 hover:bg-slate-900/30 transition shadow-md cursor-pointer select-none"
+              className="bg-white/5 border border-white/10 hover:border-cyan-500/50 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)] backdrop-blur-md rounded-2xl p-5 transition-all duration-300 shadow-md cursor-pointer select-none"
             >
               <div className="flex justify-between items-start">
                 <div className="flex gap-4">
-                  <div className="p-2.5 bg-[#0B1120] border border-slate-800 rounded-lg h-max self-center">
+                  <div className="p-2.5 bg-black/40 border border-white/10 rounded-xl h-max self-center">
                     {test.icon}
                   </div>
                   <div>
-                    <h3 className="font-sans font-medium text-base text-[#F8F9FA] hover:text-cyan-400 transition-colors">
+                    <h3 className="font-sans font-medium text-base text-slate-100 hover:text-cyan-400 transition-colors">
                       {test.title}
                     </h3>
                     <p className="font-sans text-slate-300 text-xs mt-1.5 leading-relaxed">
@@ -76,7 +76,7 @@ export default function PrivacySecurityAssessment() {
 
               {/* Collapsible details pane */}
               {isExpanded && (
-                <div className="mt-4 pt-4 border-t border-slate-800/60 text-xs text-slate-400 leading-relaxed font-sans bg-[#0B1120]/30 -mx-5 -mb-5 p-5 rounded-b-xl animate-fade-in print:block">
+                <div className="mt-4 pt-4 border-t border-white/10 text-xs text-slate-400 leading-relaxed font-sans bg-black/40 -mx-5 -mb-5 p-5 rounded-b-2xl animate-fade-in print:block">
                   <span className="font-mono text-[10px] text-cyan-400 uppercase tracking-wider block mb-1">Security Standard Explanation</span>
                   {test.details}
                 </div>
